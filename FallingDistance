@@ -1,0 +1,41 @@
+
+package fallingdistance;
+import java.text.DecimalFormat;
+
+
+public class FallingDistance
+{
+   public static void main(String[] args)
+   {
+		// Create a DecimalFormat object to format output.
+		DecimalFormat df = new DecimalFormat("0.00");
+		
+		// Display the table header.
+		System.out.println("Time\tDistance");
+		System.out.println("====================");
+		
+		// Display the table of falling times and
+		// distances.
+		for (int s = 1; s <= 10; s++)
+		{
+			System.out.println(s + "\t\t" + 
+	               df.format(fallingDistance(s)));
+		}
+	}
+	
+	/**
+		The fallingDistance method calculates the distance
+		an object falls due to the force of gravity.
+		@param seconds The amount of time, in seconds, that
+		               the object has fallen.
+		@return The distance the object falls in the specified
+		        time.
+	*/
+	public static double fallingDistance(double seconds)
+	{
+		final double GRAV = 9.8;		// Gravitational acceleration
+		
+		// return the distance, 1/2gt^2.
+		return (0.5 * GRAV * seconds * seconds);
+	}
+}
