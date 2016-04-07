@@ -1,0 +1,17 @@
+package tempconversion;
+
+
+public class TempConversion {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        double Fahr = 11.0, Celsius;
+        Celsius = (Fahr - 32)/1.8;
+        System.out.println("The Fahrenheit Temperature "
+        + Fahr + " is equivalent to "
+        + Celsius + " Celsius");
+    }
+    
+}
