@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+
+public class TheBill {
+
+   
+    public static void main(String[] args) {
+        
+       
+        double meal;
+        double billTotal;
+        double tax;
+        double tip;
+        double finalBill;
+        
+        
+        
+        
+        Scanner keyboard = new Scanner(System.in);
+        
+        System.out.println("How much is meal, bro? ");
+        meal = keyboard.nextDouble();
+        
+        
+        tax = meal * .0675;
+        
+        billTotal = tax + meal;
+        
+        tip = billTotal * .20;
+        
+        finalBill = (billTotal + tip);
+        
+        System.out.println("Yo bro, Your meal was " + meal +
+                            " \nthe tax was " + tax + " \nthe tip was " + 
+                            tip + " \nand the total bill was " + finalBill);
+        
+    
+    }
+    
+}
