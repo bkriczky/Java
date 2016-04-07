@@ -1,0 +1,35 @@
+package timecalculator;
+
+import java.util.Scanner;
+
+
+public class TimeCalculator {
+
+
+    public static void main(String[] args) {
+        
+        
+        int seconds;
+        
+        
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the number of seconds ");
+        seconds = input.nextInt();
+        
+        if (seconds > 60 && seconds < 3600){
+            System.out.println(seconds / 60 + " minuets");
+            System.out.println(seconds % 60 + " seconds");
+        }
+        
+        else if (seconds > 3600 && seconds < 86400){
+            System.out.println(seconds / 3600 + " hours");
+            System.out.println(seconds % 3600 + " seconds");
+        }
+        else if (seconds > 86400){
+            System.out.println(seconds / 86400 + " days");
+            System.out.println(seconds % 86400 + " seconds");
+        }
+
+    }
+    
+}
