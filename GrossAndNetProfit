@@ -1,0 +1,29 @@
+
+package grossandnetprofit;
+import java.util.Scanner;
+
+
+public class GrossAndNetProfit {
+
+ 
+    public static void main(String[] args) {
+        double price,cost, qty, disc_percent;
+        double gross_profit,net_profit;
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Enter the value for price");
+        price = keyboard.nextDouble();
+        System.out.println("Enter the value for cost");
+        cost = keyboard.nextDouble();
+        System.out.println("Enter the value for quantity");
+        qty = keyboard.nextDouble();
+        System.out.println("Enter the value for discount percent");
+        disc_percent = keyboard.nextDouble();
+        gross_profit = (price - cost) * qty;
+        net_profit = (1 - disc_percent)*gross_profit;
+        System.out.println("The gross profit = "
+        + gross_profit);
+        System.out.println("The net profit after discount = "
+         + net_profit);
+    }
+    
+}
