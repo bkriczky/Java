@@ -1,0 +1,21 @@
+
+package stockhw;
+
+public class StockHW {
+
+    public static void main(String[] args) {
+        
+        double stockPrice = 32.87;
+        int shares = 1000;
+        double com = .02;
+        double soldStock = 33.92;
+        double profit = (soldStock * shares) - (stockPrice * shares) - (stockPrice * com * shares) - (soldStock * com * shares);
+        
+        System.out.println("Joe paid " + stockPrice * shares);
+        System.out.println("Joe paid his broker " +stockPrice * shares * com);
+        System.out.println("Joe sold his stock for " + soldStock * shares);
+        System.out.println("Joe again paid his broker " + soldStock * shares * com);
+        System.out.println("Joe made " + profit + "$");
+    }
+    
+}
